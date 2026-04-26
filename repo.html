@@ -1,0 +1,107 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repo Likes</title>
+</head>
+<body>
+    <h2 class="question">Have you ever wondered what Repo likes?</h2>
+    <p id="yes">Yes</p>
+    <p id="no">No</p>
+
+    <a href="repo1.html">
+    <div id="output"></div>
+    </a>
+
+
+    <script>
+        document.getElementById("yes").addEventListener("click", showText);
+        document.getElementById("no").addEventListener("click", showText);
+    function showText() {
+        
+      document.getElementById("output").textContent = "Regardless! (click me)";
+    }
+  </script>
+
+    <style>
+
+        body {
+            background-color: #989aff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            
+        }
+
+        .question {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+            animation: startAnimation 1s ease-out;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .question:hover {
+            color: #6366f1;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        @keyframes startAnimation {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        #yes, #no {
+            font-size: 20px;
+            color: #555;
+            margin: 10px 0;
+            padding: 10px 20px;
+            border-radius: 8px;
+            background-color: #f0f0f0;
+            width: fit-content;
+            animation: buttonAnimation 1s ease-out;
+            cursor: pointer;
+        }
+
+        #yes:hover {
+            background-color: #15ff00;
+            color: white;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        #no:hover {
+            background-color: #ff0000;
+            color: white;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+            animation: outputAnimation 3s ease-out;
+           
+        }
+
+        @keyframes outputAnimation {
+           0% { opacity: 0; transform: translateY(-30px); }
+           50% { opacity: 1; transform: translateY(-10); }
+              100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        a {
+            text-decoration: none;
+        }
+
+        #output:hover {
+            color: #0004ff;
+            transition: color 0.1s ease;
+            cursor: pointer;
+        }
+        
+    </style>
+</body>
+</html>
